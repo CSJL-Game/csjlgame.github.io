@@ -1,798 +1,1419 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
 
-<!-- saved from url=(0027)https://csjl-game.github.io/ -->
-<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml" xmlns="http://www.w3.org/TR/REC-html40"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+.md-alert.md-alert-note { border-left-color: rgb(9, 105, 218); }
+.md-alert.md-alert-important { border-left-color: rgb(130, 80, 223); }
+.md-alert.md-alert-warning { border-left-color: rgb(154, 103, 0); }
+.md-alert.md-alert-tip { border-left-color: rgb(31, 136, 61); }
+.md-alert.md-alert-caution { border-left-color: rgb(207, 34, 46); }
+.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left: 0.25em solid rgb(0, 0, 0); }
+.md-alert-text-note { color: rgb(9, 105, 218); }
+.md-alert-text-important { color: rgb(130, 80, 223); }
+.md-alert-text-warning { color: rgb(154, 103, 0); }
+.md-alert-text-tip { color: rgb(31, 136, 61); }
+.md-alert-text-caution { color: rgb(207, 34, 46); }
+.md-alert-text { font-size: 0.9rem; font-weight: 700; }
+.md-alert-text svg { fill: currentcolor; position: relative; top: 0.125em; margin-right: 1ch; overflow: visible; }
+.md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
 
-<meta name="ProgId" content="Word.Document">
-<meta name="Generator" content="Microsoft Word 12">
-<meta name="Originator" content="Microsoft Word 12">
-<link rel="File-List" href="http://www.pixelbite.se/PrivacyPolicy-filer/filelist.xml">
-<!--[if gte mso 9]><xml>
- <o:DocumentProperties>
-  <o:Author>Mattias Olsson</o:Author>
-  <o:LastAuthor>Tobias Johansson</o:LastAuthor>
-  <o:Revision>2</o:Revision>
-  <o:TotalTime>8</o:TotalTime>
-  <o:Created>2013-01-15T16:55:00Z</o:Created>
-  <o:LastSaved>2013-01-15T16:55:00Z</o:LastSaved>
-  <o:Pages>3</o:Pages>
-  <o:Words>1095</o:Words>
-  <o:Characters>5809</o:Characters>
-  <o:Company>Hewlett-Packard Company</o:Company>
-  <o:Lines>48</o:Lines>
-  <o:Paragraphs>13</o:Paragraphs>
-  <o:CharactersWithSpaces>6891</o:CharactersWithSpaces>
-  <o:Version>12.00</o:Version>
- </o:DocumentProperties>
-</xml><![endif]-->
-<link rel="themeData" href="http://www.pixelbite.se/PrivacyPolicy-filer/themedata.thmx">
-<link rel="colorSchemeMapping" href="http://www.pixelbite.se/PrivacyPolicy-filer/colorschememapping.xml">
-<!--[if gte mso 9]><xml>
- <w:WordDocument>
-  <w:SpellingState>Clean</w:SpellingState>
-  <w:TrackMoves>false</w:TrackMoves>
-  <w:TrackFormatting/>
-  <w:HyphenationZone>21</w:HyphenationZone>
-  <w:PunctuationKerning/>
-  <w:ValidateAgainstSchemas/>
-  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
-  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
-  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
-  <w:DoNotPromoteQF/>
-  <w:LidThemeOther>SV</w:LidThemeOther>
-  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
-  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
-  <w:Compatibility>
-   <w:BreakWrappedTables/>
-   <w:SnapToGridInCell/>
-   <w:WrapTextWithPunct/>
-   <w:UseAsianBreakRules/>
-   <w:DontGrowAutofit/>
-   <w:SplitPgBreakAndParaMark/>
-   <w:DontVertAlignCellWithSp/>
-   <w:DontBreakConstrainedForcedTables/>
-   <w:DontVertAlignInTxbx/>
-   <w:Word11KerningPairs/>
-   <w:CachedColBalance/>
-   <w:UseFELayout/>
-  </w:Compatibility>
-  <m:mathPr>
-   <m:mathFont m:val="Cambria Math"/>
-   <m:brkBin m:val="before"/>
-   <m:brkBinSub m:val="&#45;-"/>
-   <m:smallFrac m:val="off"/>
-   <m:dispDef/>
-   <m:lMargin m:val="0"/>
-   <m:rMargin m:val="0"/>
-   <m:defJc m:val="centerGroup"/>
-   <m:wrapIndent m:val="1440"/>
-   <m:intLim m:val="subSup"/>
-   <m:naryLim m:val="undOvr"/>
-  </m:mathPr></w:WordDocument>
-</xml><![endif]--><!--[if gte mso 9]><xml>
- <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
-  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
-  LatentStyleCount="267">
-  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
-   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
-  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
-   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
-  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
-  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
-  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
-  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
-  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
-  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
-  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
-  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
-  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
-  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
-  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
-  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
-  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
-  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
-  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
-  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
-  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
-  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
-  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
-   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
-  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
-  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
-   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
-  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
-   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
-  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
-   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
-  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Table Grid"/>
-  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
-  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
-   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
-  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light Shading"/>
-  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light List"/>
-  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light Grid"/>
-  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Shading 1"/>
-  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Shading 2"/>
-  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium List 1"/>
-  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium List 2"/>
-  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 1"/>
-  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 2"/>
-  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 3"/>
-  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Dark List"/>
-  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful Shading"/>
-  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful List"/>
-  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful Grid"/>
-  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
-  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light List Accent 1"/>
-  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
-  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
-  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
-  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
-  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
-  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
-   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
-  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
-   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
-  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
-   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
-  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
-  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
-  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
-  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
-  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
-  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
-  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
-  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
-  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
-  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light List Accent 2"/>
-  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
-  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
-  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
-  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
-  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
-  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
-  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
-  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
-  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
-  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
-  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
-  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
-  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
-  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light List Accent 3"/>
-  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
-  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
-  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
-  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
-  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
-  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
-  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
-  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
-  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
-  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
-  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
-  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
-  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
-  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light List Accent 4"/>
-  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
-  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
-  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
-  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
-  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
-  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
-  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
-  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
-  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
-  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
-  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
-  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
-  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
-  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light List Accent 5"/>
-  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
-  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
-  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
-  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
-  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
-  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
-  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
-  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
-  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
-  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
-  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
-  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
-  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
-  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light List Accent 6"/>
-  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
-  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
-  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
-  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
-  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
-  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
-  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
-  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
-  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
-  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
-  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
-  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
-  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
-   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
-  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
-   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
-  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
-   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
-  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
-   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
-  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
-   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
-  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
-  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
- </w:LatentStyles>
-</xml><![endif]-->
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:SimSun;
-	panose-1:2 1 6 0 3 1 1 1 1 1;
-	mso-font-alt:\5B8B\4F53;
-	mso-font-charset:134;
-	mso-generic-font-family:auto;
-	mso-font-pitch:variable;
-	mso-font-signature:3 680460288 22 0 262145 0;}
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;
-	mso-font-charset:1;
-	mso-generic-font-family:roman;
-	mso-font-format:other;
-	mso-font-pitch:variable;
-	mso-font-signature:0 0 0 0 0 0;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;
-	mso-font-charset:0;
-	mso-generic-font-family:swiss;
-	mso-font-pitch:variable;
-	mso-font-signature:-520092929 1073786111 9 0 415 0;}
-@font-face
-	{font-family:"Segoe UI";
-	panose-1:2 11 5 2 4 2 4 2 2 3;
-	mso-font-charset:0;
-	mso-generic-font-family:swiss;
-	mso-font-pitch:variable;
-	mso-font-signature:-520084737 -1073683329 41 0 479 0;}
-@font-face
-	{font-family:"\@SimSun";
-	panose-1:2 1 6 0 3 1 1 1 1 1;
-	mso-font-charset:134;
-	mso-generic-font-family:auto;
-	mso-font-pitch:variable;
-	mso-font-signature:3 680460288 22 0 262145 0;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{mso-style-unhide:no;
-	mso-style-qformat:yes;
-	mso-style-parent:"";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:10.0pt;
-	margin-left:0cm;
-	line-height:115%;
-	mso-pagination:widow-orphan;
-	font-size:11.0pt;
-	font-family:"Calibri","sans-serif";
-	mso-ascii-font-family:Calibri;
-	mso-ascii-theme-font:minor-latin;
-	mso-fareast-font-family:SimSun;
-	mso-fareast-theme-font:minor-fareast;
-	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;
-	mso-fareast-language:ZH-CN;}
-h1
-	{mso-style-priority:9;
-	mso-style-unhide:no;
-	mso-style-qformat:yes;
-	mso-style-link:"Rubrik 1 Char";
-	margin-top:9.6pt;
-	margin-right:0cm;
-	margin-bottom:2.4pt;
-	margin-left:0cm;
-	line-height:normal;
-	mso-pagination:widow-orphan;
-	mso-outline-level:1;
-	font-size:32.5pt;
-	font-family:"Times New Roman","serif";
-	mso-fareast-font-family:"Times New Roman";
-	letter-spacing:-.5pt;
-	mso-fareast-language:ZH-CN;
-	font-weight:normal;}
-a:link, span.MsoHyperlink
-	{mso-style-priority:99;
-	color:blue;
-	mso-themecolor:hyperlink;
-	text-decoration:underline;
-	text-underline:single;}
-a:visited, span.MsoHyperlinkFollowed
-	{mso-style-noshow:yes;
-	mso-style-priority:99;
-	color:purple;
-	mso-themecolor:followedhyperlink;
-	text-decoration:underline;
-	text-underline:single;}
-p
-	{mso-style-noshow:yes;
-	mso-style-priority:99;
-	margin-top:7.2pt;
-	margin-right:0cm;
-	margin-bottom:3.6pt;
-	margin-left:0cm;
-	line-height:150%;
-	mso-pagination:widow-orphan;
-	font-size:12.0pt;
-	font-family:"Times New Roman","serif";
-	mso-fareast-font-family:"Times New Roman";
-	mso-fareast-language:ZH-CN;}
-span.Rubrik1Char
-	{mso-style-name:"Rubrik 1 Char";
-	mso-style-priority:9;
-	mso-style-unhide:no;
-	mso-style-locked:yes;
-	mso-style-link:"Rubrik 1";
-	mso-ansi-font-size:32.5pt;
-	mso-bidi-font-size:32.5pt;
-	font-family:"Times New Roman","serif";
-	mso-ascii-font-family:"Times New Roman";
-	mso-fareast-font-family:"Times New Roman";
-	mso-hansi-font-family:"Times New Roman";
-	mso-bidi-font-family:"Times New Roman";
-	letter-spacing:-.5pt;
-	mso-font-kerning:18.0pt;}
-span.SpellE
-	{mso-style-name:"";
-	mso-spl-e:yes;}
-.MsoChpDefault
-	{mso-style-type:export-only;
-	mso-default-props:yes;
-	mso-ascii-font-family:Calibri;
-	mso-ascii-theme-font:minor-latin;
-	mso-fareast-font-family:SimSun;
-	mso-fareast-theme-font:minor-fareast;
-	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;
-	mso-fareast-language:ZH-CN;}
-.MsoPapDefault
-	{mso-style-type:export-only;
-	margin-bottom:10.0pt;
-	line-height:115%;}
-@page WordSection1
-	{size:595.3pt 841.9pt;
-	margin:70.85pt 70.85pt 70.85pt 70.85pt;
-	mso-header-margin:35.4pt;
-	mso-footer-margin:35.4pt;
-	mso-paper-source:0;}
-div.WordSection1
-	{page:WordSection1;}
--->
-</style>
-<!--[if gte mso 10]>
-<style>
- /* Style Definitions */
- table.MsoNormalTable
-	{mso-style-name:"Normal tabell";
-	mso-tstyle-rowband-size:0;
-	mso-tstyle-colband-size:0;
-	mso-style-noshow:yes;
-	mso-style-priority:99;
-	mso-style-qformat:yes;
-	mso-style-parent:"";
-	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
-	mso-para-margin-top:0cm;
-	mso-para-margin-right:0cm;
-	mso-para-margin-bottom:10.0pt;
-	mso-para-margin-left:0cm;
-	line-height:115%;
-	mso-pagination:widow-orphan;
-	font-size:11.0pt;
-	font-family:"Calibri","sans-serif";
-	mso-ascii-font-family:Calibri;
-	mso-ascii-theme-font:minor-latin;
-	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;
-	mso-fareast-language:ZH-CN;}
-</style>
-<![endif]--><!--[if gte mso 9]><xml>
- <o:shapedefaults v:ext="edit" spidmax="3074"/>
-</xml><![endif]--><!--[if gte mso 9]><xml>
- <o:shapelayout v:ext="edit">
-  <o:idmap v:ext="edit" data="1"/>
- </o:shapelayout></xml><![endif]-->
+
+:root {
+  --mermaid-theme: night;
+}
+
+[lang='mermaid'] .label {
+  color: #333;
+}
+
+/* CSS Document */
+
+/** code highlight */
+
+.cm-s-inner .cm-variable,
+.cm-s-inner .cm-operator,
+.cm-s-inner .cm-property {
+    color: #b8bfc6;
+}
+
+.cm-s-inner .cm-keyword {
+    color: #C88FD0;
+}
+
+.cm-s-inner .cm-tag {
+    color: #7DF46A;
+}
+
+.cm-s-inner .cm-attribute {
+    color: #7575E4;
+}
+
+.CodeMirror div.CodeMirror-cursor {
+    border-left: 1px solid #b8bfc6;
+    z-index: 3;
+}
+
+.cm-s-inner .cm-string {
+    color: #D26B6B;
+}
+
+.cm-s-inner .cm-comment,
+.cm-s-inner.cm-comment {
+    color: #DA924A;
+}
+
+.cm-s-inner .cm-header,
+.cm-s-inner .cm-def,
+.cm-s-inner.cm-header,
+.cm-s-inner.cm-def {
+    color: #8d8df0;
+}
+
+.cm-s-inner .cm-quote,
+.cm-s-inner.cm-quote {
+    color: #57ac57;
+}
+
+.cm-s-inner .cm-hr {
+    color: #d8d5d5;
+}
+
+.cm-s-inner .cm-link {
+    color: #d3d3ef;
+}
+
+.cm-s-inner .cm-negative {
+    color: #d95050;
+}
+
+.cm-s-inner .cm-positive {
+    color: #50e650;
+}
+
+.cm-s-inner .cm-string-2 {
+    color: #f50;
+}
+
+.cm-s-inner .cm-meta,
+.cm-s-inner .cm-qualifier {
+    color: #b7b3b3;
+}
+
+.cm-s-inner .cm-builtin {
+    color: #f3b3f8;
+}
+
+.cm-s-inner .cm-bracket {
+    color: #997;
+}
+
+.cm-s-inner .cm-atom,
+.cm-s-inner.cm-atom {
+    color: #84B6CB;
+}
+
+.cm-s-inner .cm-number {
+    color: #64AB8F;
+}
+
+.cm-s-inner .cm-variable {
+    color: #b8bfc6;
+}
+
+.cm-s-inner .cm-variable-2 {
+    color: #9FBAD5;
+}
+
+.cm-s-inner .cm-variable-3 {
+    color: #1cc685;
+}
+
+.CodeMirror-selectedtext,
+.CodeMirror-selected {
+    background: #4a89dc;
+    color: #fff !important;
+    text-shadow: none;
+}
+
+.CodeMirror-gutters {
+    border-right: none;
+}
+
+/* CSS Document */
+
+/** markdown source **/
+.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-property
+{
+    color: #cebcca;
+}
+
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor{
+    border-left: 3px solid #b8bfc6;
+}
+
+.cm-s-typora-default .cm-comment {
+    color: #9FB1FF;
+}
+
+.cm-s-typora-default .cm-string {
+    color: #A7A7D9
+}
+
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
+    color: #848695;
+    font-style: italic;
+}
+
+.cm-s-typora-default .cm-link {
+    color: #95B94B;
+}
+
+.cm-s-typora-default .CodeMirror-activeline-background {
+    background: rgba(51, 51, 51, 0.72);
+}
+
+.cm-s-typora-default .cm-comment, .cm-s-typora-default .cm-code {
+	color: #8aa1e1;
+}@import "";
+@import "";
+@import "";
+
+:root {
+    --bg-color:  #363B40;
+    --side-bar-bg-color: #2E3033;
+    --text-color: #b8bfc6;
+
+    --select-text-bg-color:#4a89dc;
+
+    --item-hover-bg-color: #0a0d16;
+    --control-text-color: #b7b7b7;
+    --control-text-hover-color: #eee;
+    --window-border: 1px solid #555;
+
+    --active-file-bg-color: rgb(34, 34, 34);
+    --active-file-border-color: #8d8df0;
+
+    --primary-color: #a3d5fe;
+
+    --active-file-text-color: white;
+    --item-hover-bg-color: #70717d;
+    --item-hover-text-color: white;
+    --primary-color: #6dc1e7;
+
+    --rawblock-edit-panel-bd: #333;
+
+    --search-select-bg-color: #428bca;
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    background: #363B40;
+    background: var(--bg-color);
+    fill: currentColor;
+    line-height: 1.625rem;
+}
+
+#write {
+    max-width: 914px;
+}
+
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea,
+div.code-tooltip-content {
+    color: #b8bfc6;
+    border-color: transparent;
+}
+
+div.code-tooltip,
+.md-hover-tip .md-arrow:after {
+    background: #333;
+}
+
+.native-window #md-notification {
+    border: 1px solid #70717d;
+}
+
+.popover.bottom > .arrow:after {
+    border-bottom-color: #333;
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea {
+    font-family: "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+}
+
+hr {
+    height: 2px;
+    border: 0;
+    margin: 24px 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lucida Grande", "Corbel", sans-serif;
+    font-weight: normal;
+    clear: both;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    color: #DEDEDE
+}
+
+h1 {
+    font-size: 2.5rem;
+    /* 36px */
+    line-height: 2.75rem;
+    /* 40px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1.5px;
+}
+
+h2 {
+    font-size: 1.63rem;
+    /* 24px */
+    line-height: 1.875rem;
+    /* 30px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.17rem;
+    /* 18px */
+    line-height: 1.5rem;
+    /* 24px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 1.12rem;
+    /* 16px */
+    line-height: 1.375rem;
+    /* 22px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    color: white;
+}
+
+h5 {
+    font-size: 0.97rem;
+    /* 16px */
+    line-height: 1.25rem;
+    /* 22px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    font-weight: bold;
+}
+
+h6 {
+    font-size: 0.93rem;
+    /* 16px */
+    line-height: 1rem;
+    /* 16px */
+    margin-bottom: 0.75rem;
+    color: white;
+}
+
+@media (min-width: 980px) {
+    h3.md-focus:before,
+    h4.md-focus:before,
+    h5.md-focus:before,
+    h6.md-focus:before {
+        color: #ddd;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        position: absolute;
+        left: -1.642857143rem;
+        top: .357142857rem;
+        float: left;
+        font-size: 9px;
+        padding-left: 2px;
+        padding-right: 2px;
+        vertical-align: bottom;
+        font-weight: normal;
+        line-height: normal;
+    }
+
+    h3.md-focus:before {
+        content: 'h3';
+    }
+
+    h4.md-focus:before {
+        content: 'h4';
+    }
+
+    h5.md-focus:before {
+        content: 'h5';
+        top: 0px;
+    }
+
+    h6.md-focus:before {
+        content: 'h6';
+        top: 0px;
+    }
+}
+
+a {
+    text-decoration: none;
+    outline: 0;
+}
+
+a:hover {
+    outline: 0;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+sup.md-footnote {
+    background-color: #555;
+    color: #ddd;
+}
+
+p {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+p,
+ul,
+dd,
+ol,
+hr,
+address,
+pre,
+table,
+iframe,
+.wp-caption,
+.wp-audio-shortcode,
+.wp-video-shortcode {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    /* 24px */
+}
+
+audio:not([controls]) {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
+
+::-moz-selection {
+    background: #4a89dc;
+    color: #fff;
+    text-shadow: none;
+}
+
+*.in-text-selection,
+::selection {
+    background: #4a89dc;
+    color: #fff;
+    text-shadow: none;
+}
+
+ul,
+ol {
+    padding: 0 0 0 1.875rem;
+    /* 30px */
+}
+
+ul {
+    list-style: square;
+}
+
+ol {
+    list-style: decimal;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+    margin: 0;
+}
+
+b,
+th,
+dt,
+strong {
+    font-weight: bold;
+}
+
+i,
+em,
+dfn,
+cite {
+    font-style: italic;
+}
+
+blockquote {
+    padding-left: 1.875rem;
+    margin: 0 0 1.875rem 1.875rem;
+    border-left: solid 2px #474d54;
+    padding-left: 30px;
+    margin-top: 35px;
+}
+
+pre,
+code,
+kbd,
+tt,
+var {
+    font-size: 0.875em;
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+code,
+tt,
+var {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+kbd {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #fff;
+    background-color: #333;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
+}
+
+pre.md-fences {
+    padding: 10px 10px 10px 30px;
+    margin-bottom: 20px;
+    background: #333;
+}
+
+.CodeMirror-gutters {
+    background: #333;
+    border-right: 1px solid transparent;
+}
+
+.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
+    bottom: -2.2em;
+    right: 4px;
+}
+
+code,
+kbd,
+tt,
+var {
+    padding: 2px 5px;
+}
+
+table {
+    max-width: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th,
+td {
+    padding: 5px 10px;
+    vertical-align: top;
+}
+
+a {
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+hr {
+    background: #474d54;
+    /* variable */
+}
+
+h1 {
+    margin-top: 2em;
+}
+
+a {
+    color: #e0e0e0;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #fff;
+}
+
+.md-inline-math script {
+    color: #81b1db;
+}
+
+b,
+th,
+dt,
+strong {
+    color: #DEDEDE;
+    /* variable */
+}
+
+mark {
+    background: #D3D40E;
+}
+
+blockquote {
+    color: #9DA2A6;
+}
+
+table a {
+    color: #DEDEDE;
+    /* variable */
+}
+
+th,
+td {
+    border: solid 1px #474d54;
+    /* variable */
+}
+
+.task-list {
+    padding-left: 0;
+}
+
+.md-task-list-item {
+    padding-left: 1.25rem;
+}
+
+.md-task-list-item > input {
+    top: auto;
+}
+
+.md-task-list-item > input:before {
+    content: "";
+    display: inline-block;
+    width: 0.875rem;
+    height: 0.875rem;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid #b8bfc6;
+    background-color: #363B40;
+    margin-top: -0.4rem;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before {
+    content: '\221A';
+    /*◘*/
+    font-size: 0.625rem;
+    line-height: 0.625rem;
+    color: #DEDEDE;
+}
+
+/** quick open **/
+.auto-suggest-container {
+    border: 0px;
+    background-color: #525C65;
+}
+
+#typora-quick-open {
+    background-color: #525C65;
+}
+
+#typora-quick-open input{
+    background-color: #525C65;
+    border: 0;
+    border-bottom: 1px solid grey;
+}
+
+.typora-quick-open-item {
+    background-color: inherit;
+    color: inherit;
+}
+
+.typora-quick-open-item.active,
+.typora-quick-open-item:hover {
+    background-color: #4D8BDB;
+    color: white;
+}
+
+.typora-quick-open-item:hover {
+    background-color: rgba(77, 139, 219, 0.8);
+}
+
+.typora-search-spinner > div {
+  background-color: #fff;
+}
+
+#write pre.md-meta-block {
+    border-bottom: 1px dashed #ccc;
+    background: transparent;
+    padding-bottom: 0.6em;
+    line-height: 1.6em;
+}
+
+.btn,
+.btn .btn-default {
+    background: transparent;
+    color: #b8bfc6;
+}
+
+.ty-table-edit {
+    border-top: 1px solid gray;
+    background-color: #363B40;
+}
+
+.popover-title {
+    background: transparent;
+}
+
+.md-image>.md-meta {
+    color: #BBBBBB;
+    background: transparent;
+}
+
+.md-expand.md-image>.md-meta {
+    color: #DDD;
+}
+
+#write>h3:before,
+#write>h4:before,
+#write>h5:before,
+#write>h6:before {
+    border: none;
+    border-radius: 0px;
+    color: #888;
+    text-decoration: underline;
+    left: -1.4rem;
+    top: 0.2rem;
+}
+
+#write>h3.md-focus:before {
+    top: 2px;
+}
+
+#write>h4.md-focus:before {
+    top: 2px;
+}
+
+.md-toc-item {
+    color: #A8C2DC;
+}
+
+#write div.md-toc-tooltip {
+    background-color: #363B40;
+}
+
+.dropdown-menu .btn:hover,
+.dropdown-menu .btn:focus,
+.md-toc .btn:hover,
+.md-toc .btn:focus {
+    color: white;
+    background: black;
+}
+
+#toc-dropmenu {
+    background: rgba(50, 54, 59, 0.93);
+    border: 1px solid rgba(253, 253, 253, 0.15);
+}
+
+#toc-dropmenu .divider {
+    background-color: #9b9b9b;
+}
+
+.outline-expander:before {
+    top: 2px;
+}
+
+#typora-sidebar {
+    box-shadow: none;
+    border-right: 1px dashed;
+    border-right: none;
+}
+
+.sidebar-tabs {
+    border-bottom:0;
+}
+
+#typora-sidebar:hover .outline-title-wrapper {
+    border-left: 1px dashed;
+}
+
+.outline-title-wrapper .btn {
+    color: inherit;
+}
+
+.outline-item:hover {
+    border-color: #363B40;
+    background-color: #363B40;
+    color: white;
+}
+
+h1.md-focus .md-attr,
+h2.md-focus .md-attr,
+h3.md-focus .md-attr,
+h4.md-focus .md-attr,
+h5.md-focus .md-attr,
+h6.md-focus .md-attr,
+.md-header-span .md-attr {
+    color: #8C8E92;
+    display: inline;
+}
+
+.md-comment {
+    color: #5a95e3;
+    opacity: 0.8;
+}
+
+.md-inline-math svg {
+    color: #b8bfc6;
+}
+
+#math-inline-preview .md-arrow:after {
+    background: black;
+}
+
+.modal-content {
+    background: var(--bg-color);
+    border: 0;
+}
+
+.modal-title {
+    font-size: 1.5em;
+}
+
+.modal-content input {
+    background-color: rgba(26, 21, 21, 0.51);
+    color: white;
+}
+
+.modal-content .input-group-addon {
+    color: white;
+}
+
+.modal-backdrop {
+    background-color: rgba(174, 174, 174, 0.7);
+}
+
+.modal-content .btn-primary {
+    border-color: var(--primary-color);
+}
+
+.md-table-resize-popover {
+    background-color: #333;
+}
+
+.form-inline .input-group .input-group-addon {
+    color: white;
+}
+
+#md-searchpanel {
+    border-bottom: 1px dashed grey;
+}
+
+/** UI for electron */
+
+.context-menu,
+#spell-check-panel,
+#footer-word-count-info {
+    background-color: #42464A;
+}
+
+.context-menu.dropdown-menu .divider,
+.dropdown-menu .divider {
+    background-color: #777777;
+    opacity: 1;
+}
+
+footer {
+    color: inherit;
+}
+
+@media (max-width: 1000px) {
+    footer {
+        border-top: none;
+    }
+    footer:hover {
+        color: inherit;
+    }
+}
+
+#file-info-file-path .file-info-field-value:hover {
+    background-color: #555;
+    color: #dedede;
+}
+
+.megamenu-content,
+.megamenu-opened header {
+    background: var(--bg-color);
+}
+
+.megamenu-menu-panel h2,
+.megamenu-menu-panel h1,
+.long-btn {
+    color: inherit;
+}
+
+.megamenu-menu-panel input[type='text'] {
+    background: inherit;
+    border: 0;
+    border-bottom: 1px solid;
+}
+
+#recent-file-panel-action-btn {
+    background: inherit;
+    border: 1px grey solid;
+}
+
+.megamenu-menu-panel .dropdown-menu > li > a {
+    color: inherit;
+    background-color: #2F353A;
+    text-decoration: none;
+}
+
+.megamenu-menu-panel table td:nth-child(1) {
+    color: inherit;
+    font-weight: bold;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(1) {
+    color: white;
+}
+
+.modal-footer .btn-default, 
+.modal-footer .btn-primary,
+.modal-footer .btn-default:not(:hover) {
+    border: 1px solid;
+    border-color: transparent;
+}
+
+.btn-primary {
+    color: white;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
+    color: white;
+    border: 1px solid #ddd;
+    background-color: inherit;
+}
+
+.modal-header {
+    border-bottom: 0;
+}
+
+.modal-footer {
+    border-top: 0;
+}
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
+    background-color: transparent !important;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(2) {
+    color: inherit;
+}
+
+.megamenu-menu-panel .btn {
+    border: 1px solid #eee;
+    background: transparent;
+}
+
+.mouse-hover .toolbar-icon.btn:hover,
+#w-full.mouse-hover,
+#w-pin.mouse-hover {
+    background-color: inherit;
+}
+
+.typora-node::-webkit-scrollbar {
+    width: 5px;
+}
+
+.typora-node::-webkit-scrollbar-thumb:vertical {
+    background: rgba(250, 250, 250, 0.3);
+}
+
+.typora-node::-webkit-scrollbar-thumb:vertical:active {
+    background: rgba(250, 250, 250, 0.5);
+}
+
+#w-unpin {
+    background-color: #4182c4;
+}
+
+#top-titlebar, #top-titlebar * {
+    color: var(--item-hover-text-color);
+}
+
+.typora-sourceview-on #toggle-sourceview-btn,
+#footer-word-count:hover,
+.ty-show-word-count #footer-word-count {
+    background: #333333;
+}
+
+#toggle-sourceview-btn:hover {
+    color: #eee;
+    background: #333333;
+}
+
+/** focus mode */
+.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) * {
+    color: #686868 !important;
+}
+
+.on-focus-mode .md-end-block:not(.md-focus) img,
+.on-focus-mode .md-task-list-item:not(.md-focus-container)>input {
+    opacity: #686868 !important;
+}
+
+.on-focus-mode li[cid]:not(.md-focus-container){
+    color: #686868;
+}
+
+.on-focus-mode .md-fences.md-focus .CodeMirror-code>*:not(.CodeMirror-activeline) *,
+.on-focus-mode .CodeMirror.cm-s-inner:not(.CodeMirror-focused) * {
+    color: #686868 !important;
+}
+
+.on-focus-mode .md-focus,
+.on-focus-mode .md-focus-container {
+    color: #fff;
+}
+
+.on-focus-mode #typora-source .CodeMirror-code>*:not(.CodeMirror-activeline) * {
+    color: #686868 !important;
+}
+
+
+/*diagrams*/
+#write .md-focus .md-diagram-panel {
+    border: 1px solid #ddd;
+    margin-left: -1px;
+    width: calc(100% + 2px);
+}
+
+/*diagrams*/
+#write .md-focus.md-fences-with-lineno .md-diagram-panel {
+    margin-left: auto;
+}
+
+.md-diagram-panel-error {
+    color: #f1908e;
+}
+
+.active-tab-files #info-panel-tab-file,
+.active-tab-files #info-panel-tab-file:hover,
+.active-tab-outline #info-panel-tab-outline,
+.active-tab-outline #info-panel-tab-outline:hover {
+    color: #eee;
+}
+
+.sidebar-footer-item:hover,
+.footer-item:hover {
+    background: inherit;
+    color: white;
+}
+
+.ty-side-sort-btn.active,
+.ty-side-sort-btn:hover,
+.selected-folder-menu-item a:after {
+    color: white;
+}
+
+#sidebar-files-menu {
+    border:solid 1px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.79);
+    background-color: var(--bg-color);
+}
+
+.file-list-item {
+    border-bottom:none;
+}
+
+.file-list-item-summary {
+    opacity: 1;
+}
+
+.file-list-item.active:first-child {
+    border-top: none;
+}
+
+.file-node-background {
+    height: 32px;
+}
+
+.file-library-node.active>.file-node-content,
+.file-list-item.active {
+    color: white;
+    color: var(--active-file-text-color);
+}
+
+.file-library-node.active>.file-node-background{
+    background-color: rgb(34, 34, 34);
+    background-color: var(--active-file-bg-color);
+}
+.file-list-item.active {
+    background-color: rgb(34, 34, 34);
+    background-color: var(--active-file-bg-color);
+}
+
+#ty-tooltip {
+    background-color: black;
+    color: #eee;
+}
+
+.md-task-list-item>input {
+    margin-left: -1.3em;
+    margin-top: 0.3rem;
+    -webkit-appearance: none;
+}
+
+.md-mathjax-midline {
+    background-color: #57616b;
+    border-bottom: none;
+}
+
+footer.ty-footer {
+    border-color: #656565;
+}
+
+.ty-preferences .btn-default {
+    background: transparent;
+}
+.ty-preferences .btn-default:hover {
+    background: #57616b;
+}
+
+.ty-preferences select {
+    border: 1px solid #989698;
+    height: 21px;
+}
+
+.ty-preferences .nav-group-item.active,
+.export-item.active,
+.export-items-list-control,
+.export-detail {
+    background: var(--item-hover-bg-color);
+}
+
+.ty-preferences input[type="search"] {
+    border-color: #333;
+    background: #333;
+    line-height: 22px;
+    border-radius: 6px;
+    color: white;
+}
+
+.ty-preferences input[type="search"]:focus {
+    box-shadow: none;
+}
+
+[data-is-directory="true"] .file-node-content {
+    margin-bottom: 0;
+}
+
+.file-node-title {
+    line-height: 22px;
+}
+
+.html-for-mac .file-node-open-state, .html-for-mac .file-node-icon {
+    line-height: 26px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(230, 230, 230, 0.30);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgba(230, 230, 230, 0.50);
+}
+
+#typora-sidebar:hover div.sidebar-content-content::-webkit-scrollbar-thumb:horizontal {
+    background: rgba(230, 230, 230, 0.30);
+}
+
+.nav-group-item:active {
+    background-color: #474d54 !important;
+}
+
+.md-search-hit {
+    background: rgba(199, 140, 60, 0.81);
+    color: #eee;
+}
+
+.md-search-hit * {
+    color: #eee;
+}
+
+#md-searchpanel input {
+    color: white;
+}
+
+.modal-backdrop.in {
+    opacity: 1;
+    backdrop-filter: blur(1px);
+}
+
+.clear-btn-icon {
+    top: 8px;
+}
+
+/* try fix https://github.com/typora/typora-issues/issues/5253 */
+.file-node-expanded>.file-node-children {
+    display: grid;
+  }
+
+.md-alert-text-note {
+    color: rgb(47, 129, 247);
+}
+.md-alert-text-important {
+    color: rgb(163, 113, 247);
+}
+.md-alert-text-warning {
+    color:  rgb(210, 153, 34);
+}
+
+
+</style><title>PRIVACY POLICY</title>
 </head>
-
-<body lang="SV" link="blue" vlink="purple" style="tab-interval:65.2pt">
-
-<div class="WordSection1">
-
-<p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:3.6pt;
-margin-left:0cm;line-height:normal;mso-outline-level:1"><b><span lang="EN-US" style="font-size:25.0pt;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
-&quot;Times New Roman&quot;;color:#4E4E4E;letter-spacing:-.5pt;mso-font-kerning:18.0pt;
-mso-ansi-language:EN-US">Privacy Policy<o:p></o:p></span></b></p>
-
-<p class="MsoNormal" style="margin-top:7.2pt;margin-right:0cm;margin-bottom:3.6pt;
-margin-left:0cm;line-height:150%"><b><span lang="EN-US" style="font-size:10.0pt;
-mso-bidi-font-size:11.0pt;line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;
-mso-fareast-font-family:&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US">Strange Block
-Application Privacy Statement </span></b><span lang="EN-US" style="font-size:
-10.0pt;line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
-&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US"><o:p></o:p></span></p>
-
-<p class="MsoNormal" style="margin-top:7.2pt;margin-right:0cm;margin-bottom:3.6pt;
-margin-left:0cm;line-height:150%"><span lang="EN-US" style="font-size:10.0pt;
-line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
-&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US">This privacy statement
-("Privacy Statement") applies to the treatment of personally identifiable
-information submitted by, or otherwise obtained from, you in connection with
-the associated application ("Application"). The Application is provided by CSJL.
-By using or otherwise accessing the Application, you acknowledge that you
-accept the practices and policies outlined in this Privacy Statement. <o:p></o:p></span></p>
-
-<p class="MsoNormal" style="margin-top:7.2pt;margin-right:0cm;margin-bottom:3.6pt;
-margin-left:0cm;line-height:150%"><b><span lang="EN-US" style="font-size:10.0pt;
-mso-bidi-font-size:11.0pt;line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;
-mso-fareast-font-family:&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US">WHAT
-PERSONAL INFORMATION DOES Strange Block COLLECT? </span></b><span lang="EN-US" style="font-size:10.0pt;line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;
-mso-fareast-font-family:&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US"><o:p></o:p></span></p>
-
-<p class="MsoNormal" style="margin-top:7.2pt;margin-right:0cm;margin-bottom:3.6pt;
-margin-left:0cm;line-height:150%"><span lang="EN-US" style="font-size:10.0pt;
-line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
-&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US">We collect the
-following types of information from our users: <o:p></o:p></span></p>
-
-<p class="MsoNormal" style="margin-top:7.2pt;margin-right:0cm;margin-bottom:3.6pt;
-margin-left:0cm;line-height:150%"><span lang="EN-US" style="font-size:10.0pt;
-line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
-&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US">Personal Information
-You Provide to Us:<br>
-We may receive and store any information you submit to the Application (or
-otherwise authorize us to obtain " such as, from (for example) your <span class="SpellE">Facebook</span> account). The types of personal information
-collected may include your full name, email address, gender, IP address,
-browser information, username, demographic information, and any other
-information necessary for us to provide the Application services. <o:p></o:p></span></p>
-
-<p class="MsoNormal" style="margin-top:7.2pt;margin-right:0cm;margin-bottom:3.6pt;
-margin-left:0cm;line-height:150%"><span lang="EN-US" style="font-size:10.0pt;
-line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
-&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US">Personal Information
-Collected Automatically:<br>
-We receive and store certain types of usage related information whenever you
-interact with Application. For example, Strange Block may automatically receive and
-record information regarding your computer"s IP address, browser information, <span class="SpellE">Facebook</span> user ID, <span class="SpellE">Facebook</span> Page
-fan status, and URLs accessed. Such information may be shared in aggregate
-(non-personally identifiable) form with our partners. <o:p></o:p></span></p>
-
-<p class="MsoNormal" style="margin-top:7.2pt;margin-right:0cm;margin-bottom:3.6pt;
-margin-left:0cm;line-height:150%"><b><span lang="EN-US" style="font-size:10.0pt;
-mso-bidi-font-size:11.0pt;line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;
-mso-fareast-font-family:&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US">HOW
-DOES Strange Block USE THE INFORMATION IT COLLECTS? </span></b><span lang="EN-US" style="font-size:10.0pt;line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;
-mso-fareast-font-family:&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US"><o:p></o:p></span></p>
-
-<p class="MsoNormal" style="margin-top:7.2pt;margin-right:0cm;margin-bottom:3.6pt;
-margin-left:0cm;line-height:150%"><span lang="EN-US" style="font-size:10.0pt;
-line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
-&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US">Strange Block uses the
-information described in this Privacy Statement (<span class="SpellE">i</span>)
-internally, to analyze, develop and improve its products and services, and (ii)
-as set forth below in the "Will Strange Block Share any of the personal information
-it Collects" section below. <o:p></o:p></span></p>
-
-<p class="MsoNormal" style="margin-top:7.2pt;margin-right:0cm;margin-bottom:3.6pt;
-margin-left:0cm;line-height:150%"><b><span lang="EN-US" style="font-size:10.0pt;
-mso-bidi-font-size:11.0pt;line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;
-mso-fareast-font-family:&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US">APPLICATION
-PARTNER TREATMENT OF PERSONAL INFORMATION. </span></b><span lang="EN-US" style="font-size:10.0pt;line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;
-mso-fareast-font-family:&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US"><o:p></o:p></span></p>
-
-<p class="MsoNormal" style="margin-top:7.2pt;margin-right:0cm;margin-bottom:3.6pt;
-margin-left:0cm;line-height:150%"><span lang="EN-US" style="font-size:10.0pt;
-line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
-&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US">Strange Block may provide
-personal information to the applicable Application Partner. The Application
-Partner"s use of your personal information is subject to the Application
-Partner"s separate privacy policy " and not this Privacy Statement. The
-Application Partner"s privacy policy is linked to from within the Partner"s <span class="SpellE">Facebook</span> application. <o:p></o:p></span></p>
-
-<p class="MsoNormal" style="margin-top:7.2pt;margin-right:0cm;margin-bottom:3.6pt;
-margin-left:0cm;line-height:150%"><b><span lang="EN-US" style="font-size:10.0pt;
-mso-bidi-font-size:11.0pt;line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;
-mso-fareast-font-family:&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US">WILL
-Strange Block SHARE ANY OF THE PERSONAL INFORMATION IT RECEIVES? </span></b><span lang="EN-US" style="font-size:10.0pt;line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;
-mso-fareast-font-family:&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US"><o:p></o:p></span></p>
-
-<p class="MsoNormal" style="margin-top:7.2pt;margin-right:0cm;margin-bottom:3.6pt;
-margin-left:0cm;line-height:150%"><span lang="EN-US" style="font-size:10.0pt;
-line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
-&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US">Personal information
-about our users is an integral part of our business. We neither rent nor sell
-your personal information to anyone (with the exception of sharing your
-information with an applicable Application Partner " see the "Application
-Partner Treatment" section above). We share your personal information only as
-described below. <o:p></o:p></span></p>
-
-<p class="MsoNormal" style="margin-top:7.2pt;margin-right:0cm;margin-bottom:3.6pt;
-margin-left:0cm;line-height:150%"><span lang="EN-US" style="font-size:10.0pt;
-line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
-&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US">Application Partners:
-We will share your personal information with an applicable Application Partner
-(see the "Application Partner Treatment" section above). <o:p></o:p></span></p>
-
-<p class="MsoNormal" style="margin-top:7.2pt;margin-right:0cm;margin-bottom:3.6pt;
-margin-left:0cm;line-height:150%"><span lang="EN-US" style="font-size:10.0pt;
-line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
-&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US">Agents: We employ
-other companies and people to perform tasks on our behalf and need to share
-your information with them to provide products or services to you. Unless we
-tell you differently, <span class="SpellE">Strange Block"s</span> agents do not have
-any right to use personal information we share with them beyond what is
-necessary to assist us. You hereby consent to our sharing of personal
-information for the above purposes. Business Transfers: In some cases, we may
-choose to buy or sell assets. In these types of transactions, customer
-information is typically one of the business assets that are transferred.
-Moreover, if Strange Block, or substantially all of its assets were acquired, or in
-the unlikely event that Strange Block goes out of business or enters bankruptcy,
-user information would be one of the assets that is transferred or acquired by
-a third party. You acknowledge that such transfers may occur, and that any
-acquirer of Strange Block may continue to use your personal information as set
-forth in this policy. <o:p></o:p></span></p>
-
-<p class="MsoNormal" style="margin-top:7.2pt;margin-right:0cm;margin-bottom:3.6pt;
-margin-left:0cm;line-height:150%"><span lang="EN-US" style="font-size:10.0pt;
-line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
-&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US">Protection of Strange Block
-and Others: We may release personal information when we believe in good faith
-that release is necessary to comply with the law; enforce or apply our
-conditions of use and other agreements; or protect the rights, property, or
-safety of Strange Block, our employees, our users, or others. This includes
-exchanging information with other companies and organizations for fraud
-protection and credit risk reduction. <o:p></o:p></span></p>
-
-<p class="MsoNormal" style="margin-top:7.2pt;margin-right:0cm;margin-bottom:3.6pt;
-margin-left:0cm;line-height:150%"><span lang="EN-US" style="font-size:10.0pt;
-line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
-&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US">With Your Consent:
-Except as set forth above, you will be notified when your personal information
-may be shared with third parties, and will be able to prevent the sharing of
-this information. <o:p></o:p></span></p>
-
-<p class="MsoNormal" style="margin-top:7.2pt;margin-right:0cm;margin-bottom:3.6pt;
-margin-left:0cm;line-height:150%"><b><span lang="EN-US" style="font-size:10.0pt;
-mso-bidi-font-size:11.0pt;line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;
-mso-fareast-font-family:&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US">CONDITIONS
-OF USE. </span></b><span lang="EN-US" style="font-size:10.0pt;line-height:150%;
-font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
-color:#4E4E4E;mso-ansi-language:EN-US"><o:p></o:p></span></p>
-
-<p class="MsoNormal" style="margin-top:7.2pt;margin-right:0cm;margin-bottom:3.6pt;
-margin-left:0cm;line-height:150%"><span lang="EN-US" style="font-size:10.0pt;
-line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
-&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US">If you decide to use
-or otherwise access the Application, your use/access and any possible dispute
-over privacy is subject to this Privacy Statement and our Terms of Use,
-including limitations on damages, arbitration of disputes, and application of
-California state law. <o:p></o:p></span></p>
-
-<p class="MsoNormal" style="margin-top:7.2pt;margin-right:0cm;margin-bottom:3.6pt;
-margin-left:0cm;line-height:150%"><b><span lang="EN-US" style="font-size:10.0pt;
-mso-bidi-font-size:11.0pt;line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;
-mso-fareast-font-family:&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US">THIRD
-PARTY APPLICATIONS/WEBSITES. <o:p></o:p></span></b></p>
-
-<p class="MsoNormal" style="margin-top:7.2pt;margin-right:0cm;margin-bottom:3.6pt;
-margin-left:0cm;line-height:150%"><span lang="EN-US" style="font-size:10.0pt;
-line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
-&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US">The Application may
-permit you to link to other applications or websites. Such third party
-applications/websites are not under <span class="SpellE">Strange Block"s</span>
-control, and such links do not constitute an endorsement by Strange Block of those
-other applications/websites or the services offered through them. The privacy
-and security practices of such third party application/websites linked to the
-Application are not covered by this Privacy Statement, and Strange Block is not
-responsible for the privacy or security practices or the content of such
-websites. <o:p></o:p></span></p>
-
-<p class="MsoNormal" style="margin-top:7.2pt;margin-right:0cm;margin-bottom:3.6pt;
-margin-left:0cm;line-height:150%"><b><span lang="EN-US" style="font-size:10.0pt;
-mso-bidi-font-size:11.0pt;line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;
-mso-fareast-font-family:&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US">WHAT
-PERSONAL INFORMATION CAN I ACCESS? </span></b><span lang="EN-US" style="font-size:10.0pt;line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;
-mso-fareast-font-family:&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US"><o:p></o:p></span></p>
-
-<p class="MsoNormal" style="margin-top:7.2pt;margin-right:0cm;margin-bottom:3.6pt;
-margin-left:0cm;line-height:150%"><span lang="EN-US" style="font-size:10.0pt;
-line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
-&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US">Strange Block allows you
-to access the following information about you for the purpose of viewing, and
-in certain situations, updating that information. This list may change in the
-event the Application changes. <o:p></o:p></span></p>
-
-<p class="MsoNormal" style="margin-top:7.2pt;margin-right:0cm;margin-bottom:3.6pt;
-margin-left:0cm;line-height:150%"><span lang="EN-US" style="font-size:10.0pt;
-line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
-&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US">- Account and user
-profile information<br>
-- User e-mail address, if applicable<br>
-- <span class="SpellE">Facebook</span> profile information, if applicable<br>
-- User preferences<br>
-- Application specific data <o:p></o:p></span></p>
-
-<p class="MsoNormal" style="margin-top:7.2pt;margin-right:0cm;margin-bottom:3.6pt;
-margin-left:0cm;line-height:150%"><b><span lang="EN-US" style="font-size:10.0pt;
-mso-bidi-font-size:11.0pt;line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;
-mso-fareast-font-family:&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US">CAN
-CHILDREN USE THE APPLICATION? </span></b><span lang="EN-US" style="font-size:
-10.0pt;line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
-&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US"><o:p></o:p></span></p>
-
-<p class="MsoNormal" style="margin-top:7.2pt;margin-right:0cm;margin-bottom:3.6pt;
-margin-left:0cm;line-height:150%"><span lang="EN-US" style="font-size:10.0pt;
-line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
-&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US">Our site and the
-services available through Strange Block are not intended for children under the
-age of 13. Strange Block does not knowingly or specifically collect information
-about children under the age of 13 and believes that children of any age should
-get their parents" consent before giving out any personal information. We
-encourage you to participate in your child"s web experience. <o:p></o:p></span></p>
-
-<p class="MsoNormal" style="margin-top:7.2pt;margin-right:0cm;margin-bottom:3.6pt;
-margin-left:0cm;line-height:150%"><b><span lang="EN-US" style="font-size:10.0pt;
-mso-bidi-font-size:11.0pt;line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;
-mso-fareast-font-family:&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US">CHANGES
-TO THIS PRIVACY STATEMENT. </span></b><span lang="EN-US" style="font-size:10.0pt;
-line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
-&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US"><o:p></o:p></span></p>
-
-<p class="MsoNormal" style="margin-top:7.2pt;margin-right:0cm;margin-bottom:3.6pt;
-margin-left:0cm;line-height:150%"><span lang="EN-US" style="font-size:10.0pt;
-line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
-&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US">Strange Block may amend
-this Privacy Statement from time to time. Use of information we collect now is
-subject to the Privacy Statement in effect at the time such information is
-used. If we make changes in the way we use personal information, we will notify
-you by posting an announcement on our Site or sending you an email. Users are
-bound by any changes to the Privacy Statement when he or she uses or otherwise
-accesses the Application after such changes have been first posted. <o:p></o:p></span></p>
-
-<p class="MsoNormal" style="margin-top:7.2pt;margin-right:0cm;margin-bottom:3.6pt;
-margin-left:0cm;line-height:150%"><b><span lang="EN-US" style="font-size:10.0pt;
-mso-bidi-font-size:11.0pt;line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;
-mso-fareast-font-family:&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US">QUESTIONS
-OR CONCERNS. </span></b><span lang="EN-US" style="font-size:10.0pt;line-height:
-150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
-color:#4E4E4E;mso-ansi-language:EN-US"><o:p></o:p></span></p>
-
-<p class="MsoNormal" style="margin-top:7.2pt;margin-right:0cm;margin-bottom:3.6pt;
-margin-left:0cm;line-height:150%"><span lang="EN-US" style="font-size:10.0pt;
-line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
-&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US">If you have any questions
-or concerns regarding privacy in our Application, please send us a detailed
-message to kavengw@gmail.com.
-We will make every effort to resolve your concerns. <o:p></o:p></span></p>
-
-<p class="MsoNormal" style="margin-top:7.2pt;margin-right:0cm;margin-bottom:3.6pt;
-margin-left:0cm;line-height:150%"><span lang="EN-US" style="font-size:10.0pt;
-line-height:150%;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
-&quot;Times New Roman&quot;;color:#4E4E4E;mso-ansi-language:EN-US">Effective Date:
-January 1, 2024 <o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><o:p>&nbsp;</o:p></span></p>
-
-</div>
-
-
-
-
-
-</body></html>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='privacy-policy'><span>PRIVACY POLICY</span></h1><p><span>Effective Date: June1st, 2024</span></p><p><span>Thank you for playing our games! This Privacy Policy describes:</span></p><ul><li><p><span>The ways we collect personal data about you and why we do so</span></p></li><li><p><span>How we use your personal data, and</span></p></li><li><p><span>The choices you have about your personal data.</span></p></li></ul><p><span>This Privacy Policy applies to CSJL&#39;s games, store, sites and related services, which we here collectively call the Service. We may periodically update this Privacy Policy by posting a new version on </span><a href='https://csjl-game.github.io/csjlgame.github.io/' target='_blank' class='url'>https://csjl-game.github.io/csjlgame.github.io/</a><span>. If we make any material changes, we will notify you as required under applicable law, including by posting a notice in the Service prior to the change becoming effective. Your continued use of the Service after the effective date will be subject to the new Privacy Policy.</span></p><h3 id='contact-us'><span>CONTACT US</span></h3><p><span>If you have questions about data protection, or if you have any requests for resolving issues with your personal data, we encourage you to primarily contact us through the support features within each CSJL game, so we can reply to you more quickly. Alternatively, you may contact:</span></p><p><span>Email: </span><a href='mailto:csjl2024csjl@gmail.com' target='_blank' class='url'>csjl2024csjl@gmail.com</a></p><h3 id='the-data-we-collect'><span>THE DATA WE COLLECT</span></h3><p><span>The categories of personal data we collect depend on the Services you use, and the requirements of applicable law.</span></p><h4 id='data-you-provide-us-directly'><span>Data you provide us directly.</span></h4><ul><li><p><span>Contact information (such as email address)</span></p></li><li><p><span>Player name or tag and password</span></p></li><li><p><span>Profile information (such as profile photo)</span></p></li><li><p><span>Your messages and other content you submit when you use the Service (such as chat logs and player support tickets)</span></p></li><li><p><span>Data you provide in connection with surveys, promotions, sweepstakes, competitions and other events</span></p></li><li><p><span>Other data you choose to give us </span></p></li><li><p><span>Our payment service providers will collect your payment details in connection with any purchases you make through the CSJL Store</span></p></li></ul><h4 id='data-we-collect-automatically'><span>Data we collect automatically.</span></h4><ul><li><p><span>Data about your account and game progress, including in most cases an automatically created internal account ID</span></p></li><li><p><span>Your IP address and mobile device identifiers (such as your device or advertising ID)</span></p></li><li><p><span>Data about your device, such as device name and operating system, browser type and language, internet service provider, and mobile carrier</span></p></li><li><p><span>Approximate location data (as derived from IP address)</span></p></li><li><p><span>Data about your use of the Service, such as gameplay data, purchases made and your interactions with other players inside the Service</span></p></li></ul><p><span>You also have the option to create a CSJL ID using your email address or other contact information.</span></p><h4 id='data-we-collect-from-our-partners'><span>Data we collect from our partners.</span></h4><p><span>We also use third-party partners, such as social networking sites, data analytics providers and advertising networks to supplement information we have about you, such as:</span></p><ul><li><p><span>Data we receive if you link a third-party tool with the Service (such as LINE, WeChat or Kakao in some markets)</span></p></li><li><p><span>Demographic data (such as to determine the coarse location of your IP address)</span></p></li><li><p><span>Data to fight fraud (such as refund abuse in games or click fraud in advertising)</span></p></li><li><p><span>Data from platforms that the games run on or data from payment service providers (such as payment verification data)</span></p></li><li><p><span>Data for advertising and analytics purposes (such as surveys), so we can provide you a better Service</span></p></li><li><p><span>Data that you have made available to us from a third party service (such as LINE, WeChat or Kakao in some markets) via your privacy settings</span></p></li></ul><h3 id='why-do-we-collect-your-data'><span>WHY DO WE COLLECT YOUR DATA</span></h3><p><span>We use your data for a variety of business purposes, such as:</span></p><h4 id='to-make-the-service-work'><span>To make the Service work.</span></h4><p><span>To perform the contract, we process data necessary to</span></p><ul><li><p><span>Create accounts and allow you to play our games and use our Service</span></p></li><li><p><span>Operate the Service</span></p></li><li><p><span>Verify and confirm payments</span></p></li><li><p><span>Provide and deliver products and services you request</span></p></li><li><p><span>Send you Service-related communications</span></p></li></ul><h4 id='to-make-the-service-more-suitable-for-our-players'><span>To make the Service more suitable for our players.</span></h4><p><span>To provide a great Service to our players, we have a legitimate interest to collect and process necessary data to</span></p><ul><li><p><span>Update and develop player profiles</span></p></li><li><p><span>Develop and improve the Service and player experience</span></p></li><li><p><span>Manage our relationship with you</span></p></li><li><p><span>Provide social features as part of the Service</span></p></li><li><p><span>Customize your Service experience</span></p></li><li><p><span>Respond to your comments and questions and provide player support</span></p></li><li><p><span>Provide you CSJL offers in the Service as well as in other websites and services (including by email)</span></p></li><li><p><span>Send you related information, such as updates, security alerts, and support messages</span></p></li><li><p><span>Enable you to communicate with other players</span></p></li></ul><h4 id='to-show-personalized-advertisements'><span>To show personalized advertisements.</span></h4><p><span>To show you personalized advertisements in the Service and elsewhere (including email) we have a legitimate interest to process necessary data to</span></p><ul><li><p><span>Track the content you access in connection with the Service and your online behavior</span></p></li><li><p><span>Deliver, target and improve our advertising and the Service</span></p></li></ul><p><span>For information on how to opt-out from personalized advertisements, see section &#39;Your Rights and Options&#39; below.</span></p><h4 id='to-keep-the-service-safe-and-fair'><span>To keep the Service safe and fair.</span></h4><p><span>Ensuring a level playing field in the Service is a top priority for us. For more information on our acceptable use policy.</span></p><p><span>In order to keep the Service and its social features safe and fair, to fight fraud and ensure acceptable use otherwise, we have a legitimate interest to process necessary data to</span></p><ul><li><p><span>Analyze and monitor use of the Service and its social features</span></p></li><li><p><span>Moderate chats either automatically or manually</span></p></li><li><p><span>Take action against fraudulent or misbehaving players</span></p></li></ul><h4 id='to-analyze-profile-and-segment'><span>To analyze, profile, and segment.</span></h4><p><span>In all of the above cases and purposes, we may analyze, profile and segment all collected data.</span></p><h4 id='with-your-consent'><span>With your consent.</span></h4><p><span>With your consent, we may process your data for additional purposes.</span></p><p><span>We may also collect and use your device identifiers to display and personalize in-game ads and serve behaviorally targeted advertising as explained below. Where applicable, we may collect your advertising identifier (IDFA, GAID), vendor identifier, IP address, device ID and other device identifiers (country, os version, device model, client version) for these purposes. Under applicable privacy laws, including the General Data Protection Regulation (GDPR), we are required to ask your consent to do so.</span></p><p><span>This data is shared with your consent so that our ad partners can deliver the right ad and optimize the ad content to make sure you don’t see the same ad multiple times. We share your device identifiers with selected partners for such ad delivery and personalization.</span></p><p><span>For mobile advertising in apps, you can reset your Advertising Identifier and depending on your device, select to opt out of interest-based ads (Android) or turn on the Limit Ad Tracking setting (iOS).</span></p><p><span>The partners operate the ad network and mediation platform, as well as facilitate and participate in ad inventory bidding. The partners may also use the device identifiers for fraud detection purposes based on their legitimate interest. For more information, please check the partners’ privacy policies.</span></p><p><span>ironSource Privacy Policy: </span><a href='https://developers.is.com/ironsource-mobile/air/ironsource-mobile-privacy-policy/#step-1' target='_blank' class='url'>https://developers.is.com/ironsource-mobile/air/ironsource-mobile-privacy-policy/#step-1</a></p><p><span>Vungle Privacy Policy: </span><a href='https://vungle.com/privacy/' target='_blank' class='url'>https://vungle.com/privacy/</a></p><p><span>Google Privacy Policy: </span><a href='https://policies.google.com/privacy' target='_blank' class='url'>https://policies.google.com/privacy</a></p><p><span>Fyber Privacy Policy: </span><a href='https://www.digitalturbine.com/fyber-services-privacy-statement/' target='_blank' class='url'>https://www.digitalturbine.com/fyber-services-privacy-statement/</a></p><p><span>Liftoff Privacy Policy: </span><a href='https://liftoff.io/privacy-policy/' target='_blank' class='url'>https://liftoff.io/privacy-policy/</a></p><p><span>Mintegral Privacy Policy: </span><a href='https://www.mintegral.com/en/privacy' target='_blank' class='url'>https://www.mintegral.com/en/privacy</a></p><p><span>Supersonic Privacy Policy: </span><a href='https://supersonic.com/privacy/' target='_blank' class='url'>https://supersonic.com/privacy/</a></p><p><span>Unity Ads Privacy Policy: </span><a href='https://unity.com/legal/privacy-policy' target='_blank' class='url'>https://unity.com/legal/privacy-policy</a></p><p><span>Facebook Privacy Policy: </span><a href='https://www.facebook.com/privacy/policy/' target='_blank' class='url'>https://www.facebook.com/privacy/policy/</a></p><p><span>Apple Search Ads: </span><a href='https://searchads.apple.com/privacy' target='_blank' class='url'>https://searchads.apple.com/privacy</a></p><p><span>Applovin Privacy Policy: </span><a href='https://www.applovin.com/privacy/' target='_blank' class='url'>https://www.applovin.com/privacy/</a></p><h3 id='who-can-see-your-data'><span>WHO CAN SEE YOUR DATA</span></h3><p><span>Apart from CSJL, your data can be accessed by others in the following situations:</span></p><h4 id='other-players-and-users'><span>Other players and users.</span></h4><p><span>Social features are a core component of our games. Other players and users may, for example, see your profile data, in-game activities and read the messages you have posted.</span></p><h4 id='our-service-providers'><span>Our service providers.</span></h4><p><span>CSJL has vendors who help us to provide the Service. These vendors process your data only at and according to CSJL´s instructions to provide the Service, and perform tasks such as hosting, player support, advertising, analytics and fraud prevention.</span></p><h4 id='other-companies-and-public-authorities'><span>Other companies and public authorities.</span></h4><p><span>In order to verify payments (with payment providers such as Paypal) and combat fraud and illegal activity, we may process and disclose data with other companies and organizations and provide it to public authorities in response to lawful requests.</span></p><p><span>We may also disclose your data based on your consent, to comply with the law or to protect the rights, property or safety of us, our players or others.</span></p><h4 id='advertising-and-social-media-partners'><span>Advertising and Social Media partners.</span></h4><p><span>The Service includes features from our partners, such as social media interaction tools, functionalities through application programming interfaces (APIs) or software development kits (SDKs) and in-game advertising. These partners may access your data and operate under their own privacy policies. We encourage you to check their privacy policies to learn more about their data processing practices.</span></p><p><span>These partners may access data regarding your activities and your device (such as your IP address, mobile identifiers, page(s) visited, location, time of day). We may also combine and share data we have collected about you with third-party advertising partners. These advertising partners may use this data (and similar data collected from other services) for purposes of delivering targeted advertisements to you when you visit third-party services within their networks. These partners may operate under their own privacy policies. This practice is commonly referred to as “interest-based advertising” or “online behavioral advertising.” If you prefer not to share your personal data with third-party advertising partners, you may follow the instructions in “Your Rights and Options” below.</span></p><h3 id='international-data-transfers'><span>INTERNATIONAL DATA TRANSFERS</span></h3><p><span>Our Service is global by nature and your data can therefore be transferred to anywhere in the world. Because different countries may have different data protection laws than your own country, we take steps to ensure adequate safeguards are in place to protect your data as explained in this Privacy Policy. Adequate safeguards that we may use include standard contractual clauses approved by EU Commission and other lawful safeguards.</span></p><h3 id='your-rights-and-options'><span>YOUR RIGHTS AND OPTIONS</span></h3><h4 id='opt-out-of-targeted-advertising'><span>Opt-out of targeted advertising.</span></h4><p><span>You can opt-out of interest-based advertising on mobile applications by checking the privacy settings of your Android or iOS device and turning off “Allow Apps to Request to Track” or selecting &quot;Limit Ad Tracking&quot; (Apple iOS) or &quot;Opt-out of Interest Based Ads&quot; (Android).</span></p><h3 id='how-do-we-protect-your-data'><span>HOW DO WE PROTECT YOUR DATA</span></h3><h4 id='security-safeguards'><span>Security Safeguards.</span></h4><p><span>In order to help ensure a secure and safe player experience, we are continuously developing and implementing administrative, technical and physical security measures to protect your data from unauthorized access or against loss, misuse or alteration.</span></p><h4 id='data-retention'><span>Data retention.</span></h4><p><span>We retain your data for as long as your account is active or as needed to provide you the Service. We may for example periodically de-identify unused game accounts, and we may regularly review and de-identify unnecessary data.</span>
+<span>Note that if you ask us to remove your personal data, we will retain your data as necessary for our legitimate business interests, such as to comply with our legal obligations, resolve disputes, and enforce our agreements.</span></p><h3 id='children'><span>CHILDREN</span></h3><p><span>Protecting children’s privacy online is very important to us. Generally, our Services are not directed to children under 13 (or other age as required by local law), and the Services do not knowingly collect personal data from children.</span></p><p>&nbsp;</p></div></div>
+</body>
+</html>
